@@ -1,5 +1,6 @@
 package br.com.sgci.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -48,9 +49,11 @@ public class Pessoa {
 	private EstadoCivilEnum estadoCivil;
 	
 	@NotNull
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_endereco")
 	private Endereco endereco;
+	
+	public Pessoa() {}
 
 	public Pessoa(@NotNull @Size(max = 255) String nome, 
 			@NotNull TipoPessoaEnum tipo,

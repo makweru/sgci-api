@@ -43,7 +43,7 @@ public class Endereco {
 	@Column(name = "numero")
 	private Integer numero;
 
-	
+	public Endereco() {}
 	
 	public Endereco(@Size(max = 8) String cep,
 			@Size(max = 255) String estado, 
