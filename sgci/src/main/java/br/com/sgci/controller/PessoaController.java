@@ -60,6 +60,9 @@ public class PessoaController {
 	}
 
 	
-	
+	@GetMapping("/exportar-csv")
+	public ResponseEntity<String> exportarCSV(){
+		return ResponseEntity.ok(pessoaManager.exportarParaBase64());
+	}
 	
 }
