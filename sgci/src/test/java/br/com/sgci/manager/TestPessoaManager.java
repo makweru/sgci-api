@@ -57,7 +57,7 @@ class TestPessoaManager {
 	@Test
 	void Find_All_Paged() {
 		ResponsePagedCommon<PessoaResponse> retorno = pessoaManager.findAll(PessoaFactory.getPessoaFilter(pessoa.getEndereco().getCep()));
-		assertTrue(!retorno.getDados().isEmpty() && retorno.getTotalPaginas() > 0);
+		assertTrue(!retorno.getData().isEmpty() && retorno.getTotalPaginas() > 0);
 	}
 	
 	

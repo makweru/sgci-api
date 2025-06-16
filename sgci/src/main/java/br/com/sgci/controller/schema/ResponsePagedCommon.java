@@ -4,25 +4,27 @@ import java.util.List;
 
 public class ResponsePagedCommon<T> {
 
-	private List<T> dados;
+	private List<T> data;
 	private Long totalRecords;
 	private int totalPaginas;
 	private int pageSize;
+	private int page;
 
-	public ResponsePagedCommon(List<T> dados, Long totalRecords, int totalPaginas, int pageSize) {
+	public ResponsePagedCommon(List<T> data, Long totalRecords, int totalPaginas, int pageSize, int page) {
 		super();
-		this.dados = dados;
+		this.data = data;
 		this.totalRecords = totalRecords;
 		this.totalPaginas = totalPaginas;
 		this.pageSize = pageSize;
+		this.page = page;
 	}
 
-	public List<T> getDados() {
-		return dados;
+	public List<T> getData() {
+		return data;
 	}
 
-	public void setDados(List<T> dados) {
-		this.dados = dados;
+	public void setData(List<T> data) {
+		this.data = data;
 	}
 
 	public Long getTotalRecords() {
@@ -48,5 +50,15 @@ public class ResponsePagedCommon<T> {
 	public void setPageSize(int pageSize) {
 		this.pageSize = pageSize;
 	}
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	
 
 }
